@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Projects Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@7.4.1/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/framer-motion@5.5.2/dist/framer-motion.min.js"></script>
+</head>
+
+<body class="bg-gray-900 overflow-hidden text-white font-sans">
+
+    <!-- Search Overlay -->
+    <div id="search-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden justify-center items-center">
+        <div class="relative p-4 w-full max-w-lg mx-auto bg-gray-800 rounded-lg">
+            <button id="close-search" class="absolute top-2 right-2 text-white text-xl">&times;</button>
+
+            <!-- Search Bar -->
+            <input id="search-bar" type="text" class="w-full p-2 rounded bg-gray-700 text-white focus:outline-none mb-4"
+                placeholder="Search Projects..." />
+
+            <!-- Projects in the Overlay -->
+            <div class="grid grid-cols-1 gap-4" id="projects-container-overlay">
+                <!-- Dynamically generated projects will go here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-5">
+        <h1 class="text-4xl font-bold text-center mb-8">JavaScript Projects</h1>
+
+        <!-- Search Button -->
+        <button id="search-btn" class="absolute top-5 right-5 bg-gray-700 p-3 rounded-full text-white">
+            🔍
+        </button>
+
+        <!-- Swiper Container for Projects -->
+        <div class="swiper-container mt-20">
+            <div class="swiper-wrapper" id="projects-container">
+                <!-- Dynamically generated projects will go here -->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- Copyright Footer -->
+    <footer class="text-center mt-12 text-sm text-gray-500">
+        <p>&copy; <span id="current-year"></span> <a href="https://amrsamir.vercel.app" class="text-blue-400">Amr
+                Samir</a>. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@7.4.1/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

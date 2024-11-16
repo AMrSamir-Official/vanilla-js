@@ -1,0 +1,9 @@
+/* Custom styles (if needed) */
+.project-img {
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+body {
+  overflow: hidden;
+}
